@@ -8,9 +8,15 @@ const counter = ref(0)
 <template>
   <div class="items">
     <h2>State</h2>
+    <!-- Variable in HTML example -->
     <p>Current button size: {{ counter }}</p>
-    <AppButton :button-press="() => (counter < 100 ? counter++ : null)">This is what comes in the slot</AppButton>
+    <!-- Components example -->
+    <AppButton :button-press="() => (counter < 100 ? counter++ : null)"
+      >This is what comes in the slot</AppButton
+    >
     <span id="loader" :style="{ width: counter + '%' }"></span>
+    <!-- Conditional rendering -->
+    <p v-if="counter >= 100">At maximum size</p>
   </div>
 </template>
 
