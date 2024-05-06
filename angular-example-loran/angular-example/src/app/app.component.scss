@@ -1,0 +1,13 @@
+.state-check {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  span#state {
+    width: 0%;
+    height: 1rem;
+    background-color: pink;
+    border-radius: 0.5rem;
+    transition: width 250ms;
+  }
+}
